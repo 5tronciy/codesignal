@@ -9,11 +9,10 @@ function palindromeRearranging(inputString) {
       b.push(symbols[i]);
     }
   }
-  console.log(a, b);
   if (a.length === b.length) {
     return a.join("") === b.join("");
   } else {
-    a.forEach((item, index, array) => {
+    a.forEach((item, index) => {
       if (b.includes(item)) {
         delete a[index];
       }
